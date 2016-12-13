@@ -7,14 +7,24 @@
   /*outline: 1px solid green;*/
 }
 
-#find-me {
-  margin-bottom: -0.5em;
+.main-nav {
+  position: relative;
 }
 
-main-nav ul {
-  /*display: none;*/
+.icon-menu {
+  max-width: 15%;
+  max-height: 15%;
+  float: right;
+  display: block;
+  font-size: 100%;
+  outline: 3px dashed red;
+}
+
+.main-nav ul {
+  display: none;
   list-style: none;
   padding: none;
+  clear: both;
 }
 
 /*ul {
@@ -32,4 +42,14 @@ main-nav ul {
 
 .li-links {
 
+}
+
+#find-me {
+  margin-bottom: -0.5em;
+}
+
+@media only screen and (min-width: 640px) {
+  .icon-menu {
+    display: none;
+  }
 }
