@@ -1,0 +1,35 @@
+#main-h1 {
+  display: inline;
+}
+
+#main-tag {
+  display: inline;
+  /*outline: 1px solid green;*/
+}
+
+#find-me {
+  margin-bottom: -0.5em;
+}
+
+main-nav ul {
+  /*display: none;*/
+  list-style: none;
+  padding: none;
+}
+
+/*ul {
+  padding: none;
+}*/
+
+.main-nav ul li {
+  display: inline;
+  padding-right: 3em;
+}
+
+.ul-links {
+  padding: none;
+}
+
+.li-links {
+
+}
