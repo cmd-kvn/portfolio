@@ -37,10 +37,12 @@ Blog.prototype.toHtml = function() {
 //   return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
 // });
 
+// for each element of the blogEntries object array, push a new blog object into the var blogsArr. The new blog object has the needed toHtml function
 blogEntries.forEach(function(ele) {
   blogsArr.push(new Blog(ele));
 });
 
+// for each object in the blogsArr, run the toHtml function and append the object to the id'ed section
 blogsArr.forEach(function(a) {
   $('#blog-content').append(a.toHtml());
 });
