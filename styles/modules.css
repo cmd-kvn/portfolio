@@ -3,19 +3,23 @@
 }
 
 .icon-menu {
-  max-width: 20%;
-  max-height: 20%;
+  /*max-width: 20%;*/
+  /*max-height: 20%;*/
   float: right;
-  display: block;
-  font-size: 100%;
+  /*display: block;*/
+  font-size: 3em;
   outline: 3px dashed red;
 }
 
 .main-nav ul {
   display: none;
   list-style: none;
-  padding: none;
+  padding: 0;
   clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
 }
 
 .main-nav ul li {
@@ -26,7 +30,15 @@
 .welcome-box {
 }
 
+#blog-content {
+  display: none;
+}
+
 .blog-template {
+  display: none;
+}
+
+#project-content {
   display: none;
 }
 
