@@ -1,20 +1,21 @@
 .main-nav {
   position: relative;
+  outline: 2px solid white;
 }
 
 .icon-menu {
   /*max-width: 20%;*/
   /*max-height: 20%;*/
   float: right;
-  /*display: block;*/
+  display: block;
   font-size: 3em;
-  outline: 3px dashed red;
 }
 
 .main-nav ul {
   display: none;
   list-style: none;
   padding: 0;
+  margin: 0 auto;
   clear: both;
 }
 
@@ -23,38 +24,42 @@
 }
 
 .main-nav ul li {
-  display: inline;
+  /*display: inline;*/
+  display: block;
+  background-color: rgba(93, 0, 159, 0.8);
   padding-right: 3em;
 }
 
 .welcome-box {
+  font-family: Share Tech Mono;
+  color: #e5e5e5;
+  width: auto;
 }
 
-#about-me-content {
-  display: none;
+.welcome-box h1, h2 {
+  text-align: center;
 }
 
-#blog-content {
-  display: none;
+.welcome-box img {
+  display: block;
+  margin: 0 auto;
 }
 
-.blog-template {
-  display: none;
-}
-
-#project-content {
-  display: none;
-}
-
-.project-template {
-  display: none;
-}
-
+#about-me-content,
+#blog-content, .blog-template,
+#project-content, .project-template,
 #connect-content {
   display: none;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 824px) {
+  nav {
+    background-color: rgba(93, 0, 159, 0.8);
+    color: #e5e5e5;
+    height: 4em;
+    width: 100%;
+  }
+
   .icon-menu {
     display: none;
   }

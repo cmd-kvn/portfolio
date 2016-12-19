@@ -1,3 +1,44 @@
+/*
+#000000 (0,0,0)
+#5c5c5c	(92,92,92)
+#ffffff	(255,255,255)
+#e5e5e5e5 (229, 229, 229)
+#6400a9	(100,0,169)
+#5d009f	(93,0,159)
+*/
+
 img {
   max-width: 100%;
+}
+
+body {
+  background-image: url("../assets/galaxy-wallpapers-10.jpg");
+  margin: 0;
+  position: relative;
+}
+
+a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-family: Share Tech Mono;
+  font-size: 2em;
+}
+
+main {
+  background-color: rgba(92, 92, 92, 0.8);
+  height: 100%;
+  padding: 3%;
+  margin: 0 5%;
+}
+
+p {
+  color: #e5e5e5;
+  font-family: Inconsolata;
+  font-size: 1em;
+}
+
+footer {
+  color: #e5e5e5;
+  font-family: Share Tech Mono;
+  font-size: 1em;
 }
