@@ -1,59 +1,74 @@
-#main-h1 {
-  display: inline;
-}
-
-#main-tag {
-  display: inline;
-  /*outline: 1px solid green;*/
-}
-
 .main-nav {
   position: relative;
+  outline: 2px solid white;
 }
 
 .icon-menu {
-  max-width: 20%;
-  max-height: 20%;
+  /*max-width: 20%;*/
+  /*max-height: 20%;*/
   float: right;
   display: block;
-  font-size: 100%;
-  outline: 3px dashed red;
+  font-size: 3em;
 }
 
 .main-nav ul {
   display: none;
   list-style: none;
-  padding: none;
+  padding: 0;
+  margin: 0 auto;
   clear: both;
 }
 
-/*ul {
-  padding: none;
-}*/
+.main-nav:hover ul {
+  display: block;
+}
 
 .main-nav ul li {
-  display: inline;
+  /*display: inline;*/
+  display: block;
+  background-color: rgba(93, 0, 159, 0.8);
   padding-right: 3em;
 }
 
-.ul-links {
-  padding: none;
+.welcome-box {
+  font-family: Share Tech Mono;
+  color: #e5e5e5;
+  width: auto;
 }
 
-.li-links {
-
+.welcome-box h1, h2 {
+  text-align: center;
 }
 
-#find-me {
-  margin-bottom: -0.5em;
+.welcome-box img {
+  display: block;
+  margin: 0 auto;
 }
 
-.blog-template {
+#about-me-content,
+#blog-content, .blog-template,
+#project-content, .project-template,
+#connect-content {
   display: none;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 824px) {
+  nav {
+    background-color: rgba(93, 0, 159, 0.8);
+    color: #e5e5e5;
+    height: 4em;
+    width: 100%;
+  }
+
   .icon-menu {
     display: none;
+  }
+
+  .main-nav ul {
+    display: block;
+  }
+
+  .main-nav ul li {
+    display: inline;
   }
 }
