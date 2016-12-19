@@ -30,6 +30,10 @@
 .welcome-box {
 }
 
+#about-me-content {
+  display: none;
+}
+
 #blog-content {
   display: none;
 }
@@ -43,6 +47,10 @@
 }
 
 .project-template {
+  display: none;
+}
+
+#connect-content {
   display: none;
 }
 
