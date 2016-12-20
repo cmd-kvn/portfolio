@@ -1,6 +1,8 @@
 .main-nav {
   position: relative;
   outline: 2px solid white;
+  overflow: auto;
+  width: 100%;
 }
 
 .icon-menu {
@@ -46,10 +48,18 @@
 }
 
 #about-me-content,
-#blog-content, .blog-template,
-#project-content, .project-template,
+#blog-content,
+#project-content,
 #connect-content {
   display: none;
+  /*position: relative;*/
+  min-height: 100%;
+}
+
+.blog-template, project-template {
+  display: none;
+  /*position: absolute;*/
+  min-height: 100%;
 }
 
 @media only screen and (min-width: 824px) {
