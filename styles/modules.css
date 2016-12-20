@@ -1,6 +1,9 @@
 .main-nav {
   position: relative;
   outline: 2px solid white;
+  overflow: auto;
+  width: 100%;
+  background-color: rgba(93, 0, 159, 0.8);
 }
 
 .icon-menu {
@@ -26,7 +29,6 @@
 .main-nav ul li {
   /*display: inline;*/
   display: block;
-  background-color: rgba(93, 0, 159, 0.8);
   padding-right: 3em;
 }
 
@@ -46,15 +48,22 @@
 }
 
 #about-me-content,
-#blog-content, .blog-template,
-#project-content, .project-template,
+#blog-content,
+#project-content,
 #connect-content {
   display: none;
+  /*position: relative;*/
+  min-height: 100%;
+}
+
+.blog-template, project-template {
+  display: none;
+  /*position: absolute;*/
+  min-height: 100%;
 }
 
 @media only screen and (min-width: 824px) {
   nav {
-    background-color: rgba(93, 0, 159, 0.8);
     color: #e5e5e5;
     height: 4em;
     width: 100%;
