@@ -37,14 +37,10 @@ Blog.prototype.toHtml = function() {
 //   return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
 // });
 
-Blog.pushToBlogsArrAndAppend = function (inputArr) {
+Blog.pushToBlogsArr = function (inputArr) {
   // for each element of the inputArr, push a new blog object into Blog.blogsArr. The new blog object has the needed toHtml function
+  console.log('inputArr ', inputArr);
   inputArr.forEach(function(ele) {
     Blog.blogsArr.push(new Blog(ele));
-  });
-
-  // for each object in Blog.blogsArr, run the toHtml function and append the object to the id'ed section
-  inputArr.forEach(function(a) {
-    $('#blog-content').append(a.toHtml());
   });
 };
