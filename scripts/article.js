@@ -4,8 +4,14 @@
 // Use jQuery to clone the example markup for each project, as you add additional content.
 // Your "Project" prototype should have a .toHtml() function that adds new data to the DOM.
 
-var blogsArr = [];
+// new constructor
+function Blog (opts) {
+  for (keys in opts) {
+    this[keys] = opts[keys];
+  }
+}
 
+/* The old constructor
 // constructor that will take in the blogEntries object array
 function Blog (arr) {
   this.title = arr.title;
@@ -13,7 +19,10 @@ function Blog (arr) {
   this.tag = arr.tag;
   this.link = arr.link;
   this.body = arr.body;
-}
+}*/
+
+// add a property to the obj constructor with an array value
+Blog.blogsArr = [];
 
 Blog.prototype.toHtml = function() {
   var source = $('#blog-handlebars').html();
@@ -28,12 +37,14 @@ Blog.prototype.toHtml = function() {
 //   return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
 // });
 
-// for each element of the blogEntries object array, push a new blog object into the var blogsArr. The new blog object has the needed toHtml function
-blogEntries.forEach(function(ele) {
-  blogsArr.push(new Blog(ele));
-});
+Blog.pushToBlogsArrAndAppend = function (inputArr) {
+  // for each element of the inputArr, push a new blog object into Blog.blogsArr. The new blog object has the needed toHtml function
+  inputArr.forEach(function(ele) {
+    Blog.blogsArr.push(new Blog(ele));
+  });
 
-// for each object in the blogsArr, run the toHtml function and append the object to the id'ed section
-blogsArr.forEach(function(a) {
-  $('#blog-content').append(a.toHtml());
-});
+  // for each object in Blog.blogsArr, run the toHtml function and append the object to the id'ed section
+  inputArr.forEach(function(a) {
+    $('#blog-content').append(a.toHtml());
+  });
+};
