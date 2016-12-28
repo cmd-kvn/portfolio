@@ -71,6 +71,30 @@ $.ajax('/data/blogArticles.json', {
   	method: 'GET',
   	success: function(response){ // the response is blogArticles.json, but parsed
     Blog.pushToBlogsArr(response); // response is an array of objects that will be pushed into the array on the variable Blog.blogArr and appended to html
+
+    // Blog.blogsArr now is an array of objects
+
+    // map the blogsArr[] to add a wordCount property
+    // count the words in the body property of the array and use .reduce to calculate the word count.
+    // console.dir(Blog);
+    var addWordCountKey = function(curBlogObj){
+      // curBlogObj.wordCount = curBlogObj.body.match(/\w+/g).length;
+      curBlogObj.wordCount = curBlogObj.body
+      .split(' ') // the body string is now an array of strings
+      .reduce(function(acc, curr){ // the indexes are all summed up
+        return acc + curr;
+      }, 0);
+
+      return curBlogObj;
+    };
+    Blog.blogsArr.map(addWordCountKey); //(function(curBlogObj){
+    //   curBlogObj.wordCount = 1000;
+    //   });
+    //   return curBlogObj;
+    // });
+    // console.log('blog.blogarr: ', Blog.blogsArr);
+
+
     articleView.renderIndexPage();
   	},
   	error: function(response) {
