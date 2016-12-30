@@ -38,7 +38,7 @@
   //   return (new Date(nextElem.publishedOn)) - (new Date(curElem.publishedOn));
   // });
 
-  Blog.pushToBlogsArr = function (inputArr) {
+  Blog.prototype.pushToBlogsArr = function (inputArr) {
     // for each element of the inputArr, push a new blog object into Blog.blogsArr. The new blog object has the needed toHtml function
     console.log('inputArr ', inputArr);
     inputArr.forEach(function(ele) {
