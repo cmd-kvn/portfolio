@@ -32,13 +32,18 @@ QUnit.module('Blog Constructor', function() {
     assert.notEqual(testMethod1, 'undefined');
   });
 
-}); // end module Blog Constructor
-
-QUnit.module('Blog Class', function() {
-
   QUnit.test('Blog.blogsArr should be an array', function(assert) {
     assert.ok(Array.isArray(Blog.blogsArr));
   });
 
+}); // end module Blog Constructor
+
+QUnit.module('articleView ', function() {
+
+  QUnit.test('articleView object should have handleMainNav property', function(assert) {
+    var testForProperty = articleView.handleMainNav;
+
+    assert.notEqual(testForProperty, 'undefined');
+  });
 
 }); // end module Blog Class
