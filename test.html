@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.1.0.css">
+
+    <script id="blog-handlebars" type="x-handlebars-template">
+      <article class="" data-tag="category">
+        <h1 class="title">{{title}}</h1>
+        Published on <a href="{{link}}">{{date}}</a>
+        <p>Word count: {{wordCount}}</p>
+        <p class="blog-body">{{{body}}}</p>
+        <p>Tags: {{tag}}</p>
+      </article>
+    </script>
+    <!-- without this^ the test page will throw an error for the $ (ajax call) in articleView.js.
+        A possible solution would be to put the ajax call in a new script file and insert that script file in index.html but NOT test.html.
+        Or wrap the ajax call in a function and call the function in a script tag at the bottom of index.html
+    -->
+
+  </head>
+  <body>
+    <div id="qunit"></div>
+
+    <script type="text/javascript" src="https://code.jquery.com/qunit/qunit-2.1.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script type="text/javascript" src="scripts/article.js"></script>
+    <script type="text/javascript" src="scripts/articleView.js"></script>
+    <script type="text/javascript" src="test/test.js"></script>
+  </body>
+</html>
