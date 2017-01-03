@@ -3,8 +3,8 @@
 page('/about', aboutController.reveal);
 page('/blog', blogController.reveal);
 page('/connect', connectController.reveal);
-page('/project', projectController.reveal);
-//page('/welcome', welcomeController.reveal);
+page('/projects', projectController.reveal);
+page('/welcome', welcomeController.reveal);
 
 // call the page function to activate page.js and execute
 page();
