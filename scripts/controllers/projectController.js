@@ -12,7 +12,6 @@
     // $('section[id="connect-content"]').hide();
     //
     // $('section[id="project-content"]').show();
-
   };
 
   module.projectController = projectController;
