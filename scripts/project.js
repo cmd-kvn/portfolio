@@ -1,17 +1,17 @@
 (function(module) {
-  var projectObj = {};
+  var projectsObj = {};
 
-  projectObj.allRepos = [];
+  projectsObj.allProjects = [];
 
-  projectObj.requestRepos = function(callback) {
+  projectsObj.requestProjects = function(callback) {
     $.ajax('https://api.github.com/user/repos', {
       method: 'GET', // usually default
       headers: {Authorization: 'token ' + githubToken}, // this or parameters version
       //data: {access_token: githubToken}, // parameters version, developer.github.com/v3/
       success: function(response) {
-        projectObj.allRepos = response;
+        projectsObj.allProjects = response;
         console.log('ajax success ', response);
-        console.log('projectObj.allRepos: ', projectObj.allRepos);
+        console.log('projectsObj.allProjects: ', projectsObj.allProjects);
         callback();
       },
       error: function(response) {
@@ -20,11 +20,11 @@
     });
   };
 
-  projectObj.withTheAttribute = function(myAttr) {
-    return projectObj.allRepos.filter(function(aRepo) {
+  projectsObj.withTheAttribute = function(myAttr) {
+    return projectsObj.allProjects.filter(function(aRepo) {
       return aRepo[myAttr];
     });
   };
 
-  module.projectObj = projectObj;
+  module.projectsObj = projectsObj;
 })(window);
