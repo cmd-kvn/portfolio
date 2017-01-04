@@ -17,7 +17,7 @@
     );
   };
 
-  projectsObj.requestRepos(projectView.renderProjects);
+  projectsObj.requestProjects(projectView.renderProjects);
   // projectCompiler();
   // renderRepos();
   module.projectView = projectView;
