@@ -23,6 +23,19 @@
       </article>
     </script>
 
+    <script id="project-handlebars" type="x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last Updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
+
   </head>
   <body>
     <nav class="main-nav">
@@ -58,11 +71,10 @@
       </section>
 
       <section id="project-content">
-        <article class="project-template" data-tag="category">
-          <h1 class="title">Latest project</h1>
-          Published on <a href="#">date</a>
-          <p class="project-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </article>
+        <h1>Check out my Projects on GitHub:</h1>
+        <ul id="project-ul">
+          <li>Coding Projects Go Here</li>
+        </ul>
       </section>
 
       <section id="connect-content">
@@ -77,21 +89,26 @@
 
     <footer>Copyright 2016. A Kevin Wong KWeation</footer>
 
+
     <!-- Vendors -->
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <!-- Token files -->
+    <script src="/githubToken.js"></script>
     <!-- Model files -->
     <!-- <script type="text/javascript" src="scripts/mainArticles.js"></script> -->
     <script type="text/javascript" src="scripts/article.js"></script>
+    <script type="text/javascript" src="scripts/project.js"></script>
     <!-- View files -->
     <script type="text/javascript" src="scripts/articleView.js"></script>
+    <script type="text/javascript" src="scripts/projectView.js"></script>
     <!-- Controller files -->
     <script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
     <script type="text/javascript" src="scripts/controllers/blogController.js"></script>
     <script type="text/javascript" src="scripts/controllers/connectController.js"></script>
     <script type="text/javascript" src="scripts/controllers/projectController.js"></script>
-    <script type="text/javascript" src="scripts/controllers/welcomeController.js"></script>    
+    <script type="text/javascript" src="scripts/controllers/welcomeController.js"></script>
     <script type="text/javascript" src="scripts/controllers/routes.js"></script>
 
   </body>
