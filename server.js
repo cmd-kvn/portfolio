@@ -4,9 +4,9 @@ var express = require('express'),
   app = express();
 
 function proxyGitHub(request, response) {
-  console.log('Routing Github request for', request.params[0]);
-  // console.log('api key is: ', API_KEY);
+  // console.log('Routing Github request for', request.params[0]);
   // console.log('process.env: ', process.env);
+  // console.log('api key: ', process.env.API_KEY);
   (requestProxy({
     url: 'https://api.github.com/' + request.params[0],
     query: {
@@ -27,20 +27,3 @@ app.get('*', function(request, response) {
 app.listen(port, function() {
   console.log('Server started on port ' + port + '!');
 });
-
-
-// // Let's build a server!
-// var express = require('express'),
-//   port = process.env.PORT || 3000,
-//   app = express();
-//
-// app.use(express.static('./'));
-//
-// app.get('*', function(request, response) {
-//   console.log('New request:', request.url);
-//   response.sendFile('index.html', {root: '.'});
-// });
-//
-// app.listen(port, function() {
-//   console.log('Server started on port ' + port + '!');
-// });
