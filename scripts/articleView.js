@@ -81,6 +81,8 @@ $.ajax('/data/blogArticles.json', {
       // curBlogObj.wordCount = curBlogObj.body.match(/\w+/g).length;
       curBlogObj.wordCount = curBlogObj.body
       .split(' ') // the body string is now an array of strings
+      .map(function(){ // turn each word into a number
+        return 1})
       .reduce(function(acc, curr){ // the indexes are all summed up
         return acc + curr;
       }, 0);
